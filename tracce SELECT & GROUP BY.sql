@@ -1,9 +1,9 @@
 -- ---------------------------------------  QUERY CON SELECT
 
 -- 1. Selezionare tutti gli studenti nati nel 1990 (160)
-SELECT `name` , `surname`, `date_of_birth`
+SELECT `name` , `surname`, `date_of_birth` 
 FROM `students` 
-WHERE `date_of_birth`LIKE '1990-%';
+WHERE YEAR(`date_of_birth`)='1990';
 
 -- 2. Selezionare tutti i corsi che valgono più di 10 crediti (479)
 SELECT `name`, `cfu` 
@@ -13,7 +13,7 @@ WHERE`cfu`>10;
 -- 3. Selezionare tutti gli studenti che hanno più di 30 anni
 SELECT `name`,`surname` ,`date_of_birth` 
 FROM `students` 
-WHERE`date_of_birth`<='1992-01-01';
+WHERE DATE(`date_of_birth`)<='1993-02-14';
 
 -- 4. Selezionare tutti i corsi del primo semestre del primo anno di un qualsiasi corso di laurea (286)
 SELECT `name` , `period`, `year` 
