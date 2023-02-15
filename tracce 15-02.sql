@@ -37,7 +37,7 @@ FROM `departments`
 JOIN `degrees`
 ON `degrees`.`department_id` = `departments`.`id`
 JOIN `courses`
-ON `courses`.`degree_id` =  `degrees`.`department_id`
+ON `courses`.`degree_id` =  `degrees`.`id`
 JOIN `course_teacher`
 ON `course_teacher`.`course_id` = `courses`.`id`
 JOIN `teachers`
